@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de Matrices con NumPy</title>
+</head>
+<body>
+    <h1>Suma de Matrices con NumPy</h1>
+    
+    <!-- Paso 1: Solicitar dimensiones -->
+    <div id="step1">
+        <h2>Paso 1: Definir dimensiones</h2>
+        <label for="filas">Filas:</label>
+        <input type="number" id="filas" min="1" required>
+        <label for="columnas">Columnas:</label>
+        <input type="number" id="columnas" min="1" required>
+        <button onclick="crearMatrices()">Continuar</button>
+    </div>
+    
+    <!-- Paso 2: Ingresar datos de las matrices -->
+    <div id="step2" style="display: none;">
+        <h2>Paso 2: Ingresar datos de las matrices</h2>
+        <div style="display: flex; justify-content: space-around;">
+            <div>
+                <h3>Matriz 1</h3>
+                <div id="matriz1-container"></div>
+            </div>
+            <div>
+                <h3>Matriz 2</h3>
+                <div id="matriz2-container"></div>
+            </div>
+        </div>
+        <button onclick="validarYEnviar()">Sumar Matrices</button>
+    </div>
+    
+    <!-- Paso 3: Mostrar resultado -->
+    <div id="step3" style="display: none;">
+        <h2>Resultado de la suma</h2>
+        <div id="resultado-container"></div>
+        <p id="detalle-operacion"></p>
+        <button onclick="resetear()">Volver al inicio</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
