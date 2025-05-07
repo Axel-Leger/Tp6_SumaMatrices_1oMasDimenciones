@@ -29,7 +29,6 @@ def sumar_matrices():
         # Convertir el resultado a lista para JSON
         return jsonify({
             'resultado': resultado.tolist(),
-            'detalle': 'Suma realizada con NumPy'
         })
 
     except ValueError as e:
